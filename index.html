@@ -30,6 +30,32 @@
 @keyframes light-fall{0%{transform:translate3d(0,-20px,0);opacity:0}10%{opacity:.78}75%{opacity:.6}100%{transform:translate3d(32px,105vh,0);opacity:0}}
 .glints i{height:4px;background:linear-gradient(90deg,transparent,#fff6ca 25%,#fff 50%,#fff6ca 75%,transparent);filter:drop-shadow(0 0 3px #fff6c9) drop-shadow(0 1px 1px #6b9fac88)}
 @keyframes water-shine{0%,100%{opacity:.15;transform:translateX(-4px) scaleX(.5)}38%{opacity:1;transform:translateX(3px) scaleX(1.45)}66%{opacity:.4;transform:translateX(7px) scaleX(.9)}}
+.guide .bus-times{margin-top:5px;border:0;text-align:left}.guide .bus-times:last-of-type{border:0}.guide .bus-times summary{display:flex;align-items:center;justify-content:flex-start;gap:9px;min-height:36px;padding:0;font-size:12px;color:var(--muted)}.guide .bus-times summary:after{font-size:14px}.guide .bus-times-content{padding:2px 0 4px}.guide .transit-note{display:block;margin-top:0;font-size:11px;line-height:1.55;word-break:keep-all}
+#location .map-wrap{margin:17px 0 18px}
+#location .sea{fill:#eaf1f3}#location .park{fill:#edf0e7}#location .roads{stroke:#d5d9d7}
+#location .map-text{fill:#868a86;font:12px/1.5 sans-serif}
+#location .walking{stroke:#73949c}#location .stop-dot{fill:#73949c;stroke:#fdfbf7;stroke-width:3}
+#location .stop-label{fill:#547780;font:13px/1.5 sans-serif}
+#location .hotel-halo{fill:#efe0d4}#location .hotel-dot{fill:#b28d72}
+#location .hotel-label{fill:#6a5546;font:14px/1.5 serif}
+#location .map-caption{text-align:right;color:#939088;font:10px/1.5 sans-serif;margin-top:3px}
+#location .bus-controls{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
+#location button{font:12px/1.5 sans-serif;min-height:44px;padding:0 11px;border:1px solid #e2e3df;border-radius:20px;color:#747c7c;background:#fdfbf7;cursor:pointer}
+#location button[aria-pressed="true"]{background:#e8eff0;border-color:#afc2c6;color:#486970}
+#location .route-detail{padding-top:18px;text-align:center;min-height:80px}
+#location .origin{font-size:11px;line-height:1.7;color:#89857e}
+#location .arrival{font-size:13px;line-height:1.8;margin-top:4px;word-break:keep-all}
+#location .route-detail a{display:inline-block;font:11px/1.6 sans-serif;color:#708c93;text-decoration:none;margin-top:7px;padding:5px}
+#location #wr-times{margin-top:14px;border-top:1px solid #e8e4dd}
+#location #wr-times summary{list-style:none;display:flex;align-items:center;justify-content:space-between;min-height:44px;font-size:12px;cursor:pointer}
+#location #wr-times summary::-webkit-details-marker{display:none}
+#location #wr-times summary span{color:#8a9698;font:16px sans-serif}
+#location #wr-times[open] summary span{transform:rotate(45deg)}
+#location .times-content{font:11px/1.8 sans-serif;color:#817d76;padding:0 0 4px}
+#location .footnote{font-size:10px;line-height:1.6;margin-top:0;word-break:keep-all}
+#location [hidden]{display:none!important}
+@media(max-width:360px){#location .invitation{padding:27px 14px 23px}#location button{padding:0 9px}}
+#location .map-wrap svg{display:block;width:100%;height:auto;overflow:visible}#location .map-text{font-size:14px}#location .map-caption{font-size:11px}#location .footnote{font-size:11px}#location .route-detail{padding-top:18px;text-align:center}#location .bus-controls{margin-bottom:0}#location #wr-times{margin-bottom:20px}#location .map-buttons{margin-top:18px}
 </style>
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
@@ -113,17 +139,32 @@
                 </tbody>
             </table></section>
 <div class="divider" aria-hidden="true"></div>
-<section id="location"><p class="eyebrow">LOCATION</p><h2>오시는 길</h2><p class="venue">타니베이 호텔 3F 소라홀</p><p class="address">울산광역시 동구 해수욕장5길 43</p><figure class="map"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 250" role="img" aria-labelledby="map-title map-desc">
-<title id="map-title">타니베이 호텔 약도</title><desc id="map-desc">방어진순환도로에서 등대사거리를 지나 일산해수욕장과 대왕암공원 사이의 타니베이 호텔로 진입하는 길을 나타낸 약도</desc>
-<path d="M286 35C201 44 227 111 278 146L360 176V35Z" fill="#e7f0f3"/>
-<path d="M312 184Q286 208 284 232H360V183Z" fill="#edf1e9"/>
-<g fill="none" stroke="#c7d2d4" stroke-linecap="round" stroke-linejoin="round"><path d="M137 36 99 164 280 234" stroke-width="7"/><path d="M51 36 26 120 99 164" stroke-width="4"/><path d="M126 78 212 98 240 154 326 191 280 234" stroke-width="4"/><path d="M158 87 133 162 254 208" stroke-width="3"/></g>
-<g fill="none" stroke="#66838f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M136 40 99 164 195 201 233 159"/><path d="m221 163 12-4-3 13"/></g>
-<circle cx="244" cy="149" r="9" fill="#354c55"/><circle cx="244" cy="149" r="3" fill="#fffdf9"/>
-<g fill="#647e86" font-family="'Noto Sans KR','Malgun Gothic',sans-serif" font-size="12"><text x="17" y="22">방어진순환도로</text><text x="302" y="82" text-anchor="middle">일산해수욕장</text><text x="56" y="191" text-anchor="middle">등대사거리</text><text x="312" y="222" text-anchor="middle">대왕암공원</text></g>
-<rect x="160" y="113" width="113" height="24" rx="3" fill="#fffdf9"/><text x="216" y="130" text-anchor="middle" fill="#354c55" font-family="'Noto Sans KR','Malgun Gothic',sans-serif" font-size="15" font-weight="600">타니베이 호텔</text></svg></figure>
+<section id="location"><p class="eyebrow">LOCATION</p><h2>오시는 길</h2><p class="venue">타니베이 호텔 3F 소라홀</p><p class="address">울산광역시 동구 해수욕장5길 43</p>  <div class="map-wrap">
+   <svg viewBox="0 0 360 330" role="img" aria-labelledby="wr-title wr-desc">
+    <title id="wr-title">타니베이 호텔과 버스 하차 지점 약도</title>
+    <desc id="wr-desc">일산해수욕장 정류장에서 북쪽 골목을 거쳐 해변길로 이동하는 도보 경로. 실제 길을 단순화한 약도로 축척은 일정하지 않습니다.</desc>
+    <path d="M258 0 Q229 68 245 138 Q258 211 327 266 L360 274 V0Z" class="sea"/>
+    <path d="M313 287 Q291 303 284 330 H360 V276Z" class="park"/>
+    <g fill="none" class="roads" stroke-linecap="round" stroke-linejoin="round"><path d="M100 8 L64 228 L215 316 L242 330" stroke-width="7"/><path d="M64 228 L43 322" stroke-width="6"/><path d="M91 57 L223 85 Q220 155 250 228 L280 272 L215 316" stroke-width="4"/><path d="M65 228 L211 309 L250 228" stroke-width="4"/><path d="M17 184 L65 228" stroke-width="3"/><path d="M85 111 L216 139 M75 169 L231 200" stroke-width="2"/></g>
+    <g class="map-text"><text x="295" y="124" text-anchor="middle">일산해수욕장</text><text x="301" y="315">대왕암공원</text><text x="20" y="219">등대사거리</text><text x="112" y="292" transform="rotate(30 112 292)">등대로</text><text x="35" y="154" transform="rotate(-81 35 154)">방어진순환도로</text></g>
+    <path id="wr-path" d="M82 107 L90 58 L223 85 Q220 155 250 228" fill="none" class="walking" stroke-width="3" stroke-dasharray="4 6" stroke-linecap="round" stroke-linejoin="round"/>
+    <g id="wr-stop"><circle id="wr-stop-dot" cx="82" cy="107" r="6" class="stop-dot"/><text id="wr-stop-text" x="110" y="108" class="stop-label">일산해수욕장 하차</text></g>
+    <circle cx="250" cy="228" r="11" class="hotel-halo"/><circle cx="250" cy="228" r="5" class="hotel-dot"/>
+    <text x="228" y="224" text-anchor="end" class="hotel-label">타니베이 호텔</text><text x="228" y="242" text-anchor="end" class="map-text">3F 소라홀</text>
+   </svg>
+   <p class="map-caption">주변 도로를 단순화한 약도</p>
+  </div>
+  <div class="bus-controls" aria-label="버스별 도보 경로">
+   <button type="button" data-route="ktx" aria-pressed="true">5002번</button><button type="button" data-route="airport" aria-pressed="false">112 · 122 · 142번</button><button type="button" data-route="terminal" aria-pressed="false">1411번</button>
+  </div>
+  <div class="route-detail" aria-live="polite">
+   <p id="wr-origin" class="origin">KTX 울산역(통도사)에서 오시는 분께</p>
+   <p id="wr-arrival" class="arrival">일산해수욕장 하차 · 도보 약 10분</p>
+   <a id="wr-link" target="_blank" rel="noopener noreferrer" href="https://map.naver.com/p/directions/3AWr3U,2znbgI,일산해수욕장,611569,BUS_STATION/3AWAob,2zn2XH,타니베이호텔,1404081950,PLACE_POI/-/walk">네이버에서 도보길 보기 ↗</a>
+  </div>
+  <details id="wr-times"><summary>5002번 버스 출발 예정시간 <span aria-hidden="true">+</span></summary><div class="times-content"><p>울산역 출발 · 11:20 / 11:40 / 12:10 / 12:30</p><p>예식장까지 도보 포함 약 1시간 30분 소요</p><p class="footnote">*열차 지연 및 버스시간 변경이 있을 수 있습니다.</p></div></details>
 <div class="map-buttons"><a href="https://map.naver.com/v5/search/타니베이호텔" target="_blank" rel="noopener noreferrer">네이버 지도</a><a href="https://map.kakao.com/link/search/타니베이호텔" target="_blank" rel="noopener noreferrer">카카오맵</a><a href="https://www.google.com/maps/search/?api=1&amp;query=타니베이호텔" target="_blank" rel="noopener noreferrer">구글 지도</a></div>
-<div class="guide"><h3>자가용 · 주차 안내</h3><p>내비게이션에서 ‘타니베이 호텔’ 검색<br>웨딩홀 주차장 이용</p><h3>대중교통 안내</h3><dl><dt>울산역 KTX</dt><dd>급행 5002 · 일산해수욕장 하차</dd><dt>울산공항</dt><dd>112 · 122 · 142 · 대왕암공원입구 하차</dd><dt>시외·고속버스터미널</dt><dd>1411 · 휴먼시아아파트 하차</dd></dl></div></section>
+<div class="guide"><h3>자가용 · 주차 안내</h3><p>내비게이션에서 ‘타니베이 호텔’ 검색<br>웨딩홀 주차장 이용</p></div></section>
 <div class="divider" aria-hidden="true"></div>
 <section><p class="eyebrow">WITH GRATITUDE</p><h2>마음 전하실 곳</h2><p class="account-note">보내주시는 따뜻한 마음에<br>깊이 감사드립니다.</p>
 <details><summary>신랑측 계좌번호</summary><div class="account-body"><div><p class="account-owner">권혁범</p><p class="account-number" id="groom-acc">우리은행 1002354157092</p></div><button class="copy" type="button" data-copy="groom-acc" aria-label="권혁범 계좌번호 복사">복사</button></div><div class="account-body"><div><p class="account-owner">아버지 권오근</p><p class="account-number" id="groom-father-acc">우리은행 1002705424650</p></div><button class="copy" type="button" data-copy="groom-father-acc" aria-label="아버지 권오근 계좌번호 복사">복사</button></div><div class="account-body"><div><p class="account-owner">어머니 김에스더</p><p class="account-number" id="groom-mother-acc">KB국민은행 233001-04-328088</p></div><button class="copy" type="button" data-copy="groom-mother-acc" aria-label="어머니 김에스더 계좌번호 복사">복사</button></div></details>
@@ -155,5 +196,28 @@ function init(){if(ctx)return;const AudioContext=window.AudioContext||window.web
  music.addEventListener('play',()=>{init();if(ctx)ctx.resume().catch(()=>{})});music.addEventListener('pause',()=>{if(ctx)ctx.suspend().catch(()=>{})});
  document.querySelector('.music-toggle').addEventListener('click',()=>{init();if(!music.paused&&ctx)ctx.resume().catch(()=>{})});
  if(!music.paused){init();if(ctx)ctx.resume().catch(()=>{})}
+})();
+</script><script>
+(()=>{
+ const root=document.getElementById('location');
+ const routes={
+  ktx:{origin:'KTX 울산역(통도사)에서 오시는 분께',stop:'일산해수욕장',time:'약 10분',path:'M82 107 L90 58 L223 85 Q220 155 250 228',x:82,y:107,lx:110,ly:108,source:'3AWr3U,2znbgI,일산해수욕장,611569,BUS_STATION'},
+  airport:{origin:'울산공항에서 오시는 분께',stop:'대왕암공원입구',time:'약 10분',path:'M54 262 L62 228 L70 222 L211 309 L250 228',x:54,y:262,lx:65,ly:277,source:'3AWobr,2zn05M,대왕암공원입구,611570,BUS_STATION'},
+  terminal:{origin:'시외·고속버스터미널에서 오시는 분께',stop:'휴먼시아아파트',time:'약 5분',path:'M222 316 L211 309 L250 228',x:222,y:316,lx:90,ly:325,source:'3AWwfM,2zmXMI,휴먼시아아파트,600907,BUS_STATION'}
+ };
+ function select(key){
+  const r=routes[key]; if(!r)return;
+  root.querySelectorAll('[data-route]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.route===key)));
+  root.querySelector('#wr-path').setAttribute('d',r.path);
+  const dot=root.querySelector('#wr-stop-dot');dot.setAttribute('cx',r.x);dot.setAttribute('cy',r.y);
+  const label=root.querySelector('#wr-stop-text');label.setAttribute('x',r.lx);label.setAttribute('y',r.ly);label.textContent=r.stop+' 하차';
+  root.querySelector('#wr-origin').textContent=r.origin;
+  root.querySelector('#wr-arrival').textContent=r.stop+' 하차 · 도보 '+r.time;
+  root.querySelector('#wr-desc').textContent=r.stop+' 정류장에서 타니베이 호텔까지 걷는 길을 단순화한 약도. 축척은 일정하지 않습니다.';
+  root.querySelector('#wr-link').href='https://map.naver.com/p/directions/'+r.source+'/3AWAob,2zn2XH,타니베이호텔,1404081950,PLACE_POI/-/walk';
+  root.querySelector('#wr-times').hidden=key!=='ktx';
+ }
+ root.querySelectorAll('[data-route]').forEach(b=>b.addEventListener('click',()=>select(b.dataset.route)));
+ select('ktx');
 })();
 </script></body></html>
